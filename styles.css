@@ -1,0 +1,180 @@
+:root {
+  --transparente: #c2baa9bb;
+  --blanco: #d1eef093;
+  --oscuro: #140600c7;
+  --verde: #58e758cb;
+  --verdeOscuro: #2b6e11;
+  --rojito: #960f0f;
+  --gris: #22332fc4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      /* cambie la imagen a su gusto*/
+  background-image: url(https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2153039943/assets/background.jpg?1690899130326447);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* contenedor principal transparente*/
+
+.contenedor {
+  min-height: 400px;
+  min-width: 540px;
+  font-family: "Righteous", "Chakra Petch", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--oscuro);/* 
+  backdrop-filter: blur(25px); */
+  /*La propiedad de arriba tiene un comportamiendo distinto preferi usar un color con trasnparencia*/
+  background-color: var(--transparente);
+  border-radius: 15px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  box-shadow: 15px 15px 25px var(--oscuro);
+  position: relative;
+}
+
+/* Parte para el Usuario */
+
+.usuario__fecha {
+  padding: 5px 10px;
+  background-color: var(--blanco);
+  position: absolute;
+  font-size: 20px;
+  font-family: "Chakra Petch", sans-serif;
+  top: 20px;
+  left: 20px;
+  border: 1px solid var(--oscuro);
+  border-radius: 5px;
+}
+
+.usuario {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Rallita */
+
+.rallita {
+  border: 1px solid;
+  width: 500px;
+  background-color: var(--oscuro);
+}
+
+/* Seccion de input para Add tareas */
+
+.crear {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.crear__input {
+  font-family: "Chakra Petch", sans-serif;
+  min-width: 350px;
+  width: 300px;
+  height: 50px;
+  background-color: var(--blanco);
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid var(--oscuro);
+  border-radius: 5px;
+  outline: none;
+}
+
+.crear__input:hover {
+  border: 1px solid black;
+}
+
+.crear__input::placeholder {
+  color: var(--oscuro);
+}
+
+.crear i {
+  color: var(--oscuro);
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.crear i:hover {
+  transform: scale(1.3);
+}
+
+/* Seccion de las tareas */
+
+.pendiente {
+  padding: 10px;
+  width: 450px;
+  text-align: center;
+}
+
+.pendiente__titulo {
+  padding: 10px;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.pendiente__tareas {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: auto;
+}
+
+.pendiente__tarea--div {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  background-color: var(--blanco);
+  padding: 10px;
+  border: 1px solid var(--negro);
+  border-radius: 5px;
+}
+
+/* Cambio de realizada */
+
+.realizada__tarea {
+  border: 2px solid var(--verdeOscuro);
+  color: var(--gris);
+  background-color: var(--verde);
+}
+
+/* elementos i para en las tareas :D */
+
+.pendiente__div--iconos {
+  display: flex;
+  gap: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.fa-regular {
+  transition: .7s;
+}
+
+.fa-regular:hover {
+  transform: scale(1.3);
+}
+
+/* El Boton(eliminar)*/
+
+.fa-trash-can {
+  color: var(--rojito);
+}
